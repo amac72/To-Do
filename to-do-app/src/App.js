@@ -8,7 +8,7 @@ import './App.css';
      <div className="App">
        <h1>To-Do</h1>
        <h2>View, add, change, and delete items from your to-do list.</h2>
-       <a href="https://github.com/amac72/To-Do">Click Me to Visit the Repo!</a>
+       <a href="https://github.com/amac72/To-Do" target="_blank" rel="noopener noreferrer">Click Me to Visit the Repo!</a>
        <hr></hr>
        <br></br>
        <Main />
