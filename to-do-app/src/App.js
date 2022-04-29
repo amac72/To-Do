@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+ import Main from './Main.js';
 
-export default App;
+ function App() {
+   document.title = "To-Do"
+   return (
+     <div className="App">
+       <h1>To-Do</h1>
+       <h2>View, add, change, and delete items from your to-do list.</h2>
+       <a href="https://github.com/amac72/To-Do">Click Me to Visit the Repo!</a>
+       <hr></hr>
+       <br></br>
+       <Main />
+     </div>
+   );
+ }
+
+ export default App;
