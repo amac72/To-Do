@@ -4,8 +4,8 @@ import './Main.css'
 
 // Tasks
 let tasks = [
-  {description: "Clean apartment", date: "04/27/22"},
-  {description: "Pay rent", date: "05/01/22"}
+  {description: "Clean apartment", date: "2022-04-27"},
+  {description: "Pay rent", date: "2022-05-01"}
 ]
 
 const Task = ({ task }) => {
@@ -29,7 +29,7 @@ const Task = ({ task }) => {
     <input class="description" onChange={(event) => update(event.target.value, 'description', data)} value={data.description} /> 
     </h3>
     <p>
-    <input class="date" onChange={(event) => update(event.target.value, 'date', data)} value={data.date} />
+    <input type="date" class="date" onChange={(event) => update(event.target.value, 'date', data)} value={data.date} />
     </p>
     </div>
     <br></br>
