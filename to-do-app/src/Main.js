@@ -25,12 +25,10 @@ const Task = ({ task }) => {
    // UI Structure of Each Task
    return (<React.Fragment>
     <div class="TaskFrame">
-    <h3>
     <input class="description" onChange={(event) => update(event.target.value, 'description', data)} value={data.description} /> 
-    </h3>
-    <p>
+    <button class="button" type="button">Click Me!</button>
     <input type="date" class="date" onChange={(event) => update(event.target.value, 'date', data)} value={data.date} />
-    </p>
+    <p></p>
     </div>
     <br></br>
    </React.Fragment>);
