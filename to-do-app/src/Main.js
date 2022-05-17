@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import './Main.css'
 
-// Tasks
 let tasks = [
   {description: "Clean apartment", date: "2022-04-27"},
   {description: "Pay rent", date: "2022-05-01"}
