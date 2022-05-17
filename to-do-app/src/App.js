@@ -1,19 +1,15 @@
 import './App.css';
+import Header from './header/Header.js';
+import List from './list/List.js';
 
- import Main from './Main.js';
+function App() {
+  document.title = "To-Do"
+  return (
+    <div className="App">
+      <Header />
+      <List />
+    </div>
+  );
+}
 
- function App() {
-   document.title = "To-Do"
-   return (
-     <div className="App">
-       <h1>To-Do</h1>
-       <h2>View, add, change, and delete items from your to-do list.</h2>
-       <a href="https://github.com/amac72/To-Do" target="_blank" rel="noopener noreferrer">Click Me to Visit the Repo!</a>
-       <hr></hr>
-       <br></br>
-       <Main />
-     </div>
-   );
- }
-
- export default App;
+export default App;

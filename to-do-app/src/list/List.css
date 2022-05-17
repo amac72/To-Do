@@ -1,11 +1,3 @@
-h1 {
-    font-size: 40px;
-}
-
-h3 {
-    height: 10px;
-}
-
 .TaskFrame {
     border: solid 1px gray;
     border-radius: 20px;
@@ -31,7 +23,7 @@ h3 {
 }
 
 .button {
-    background-color: gray; /* Green */
+    background-color: gray;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -39,4 +31,4 @@ h3 {
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-  }
+}
