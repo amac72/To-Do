@@ -1,13 +1,17 @@
 import './App.css';
-import Header from './header/Header.js';
-import List from './list/List.js';
+import data from "./components/taskList/test.json";
+import Header from './components/header/Header.js';
+import TaskList from './components/taskList/TaskList.js';
+import React, { useState } from 'react';
 
 function App() {
-  document.title = "To-Do"
+  document.title = "To-Do";
+  const [taskList, setTaskList] = useState(data);
+
   return (
     <div className="App">
       <Header />
-      <List />
+      <TaskList taskList={taskList} />
     </div>
   );
 }

@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "description": "Clean apartment",
+        "date": "2022-04-27"
+    },
+    {
+        "id": 2,
+        "description": "Pay rent",
+        "date": "2022-05-01"
+    }
+]
