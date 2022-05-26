@@ -9,10 +9,10 @@ const Task = ({ task }) => {
     }
 
     return (
-        <div class="TaskFrame">
-            <input class="description" onChange={(event) => update(event.target.value, 'description', data)} value={data.description} />
-            <p></p>
-            <input type="date" class="date" onChange={(event) => update(event.target.value, 'date', data)} value={data.date} />
+        <div className="TaskFrame">
+            <input className="description" onChange={(event) => update(event.target.value, 'description', data)} value={data.description} />
+            <input type="date" className="date" onChange={(event) => update(event.target.value, 'date', data)} value={data.date} />
+            <button className="deleteButton">Delete</button>
         </div>
     )
 }

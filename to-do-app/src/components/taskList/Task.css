@@ -1,34 +1,36 @@
-.TaskFrame {
-    border: solid 1px gray;
-    border-radius: 20px;
-    box-shadow: 0 0 5px grey;
-    width: 750px;
-    margin: auto;
-    text-align: left;
-    padding: 10px;
-    padding-left: 50px;
-}
-
 .description {
+    grid-area: task;
     border: none;
     font-size: 20px;
-    width: 550px;
+    width: auto;
 }
 
 .date {
+    grid-area: date;
     border: none;
     font-size: 20px;
     color: grey;
     width: 150px;
 }
 
-.button {
+.deleteButton {
+    grid-area: delete;
     background-color: gray;
-    border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
+    border-radius: 20px;
+}
+
+.TaskFrame {
+    display: grid;
+    grid-template-areas:
+        'task task task task delete'
+        'date date date date delete';
+    gap: 10px;
+    padding: 10px;
+    width: 750px;
+    margin: auto;
+    border: solid 1px gray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px grey;
 }
