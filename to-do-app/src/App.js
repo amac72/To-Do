@@ -1,13 +1,13 @@
 import './App.css';
-import Header from './header/Header.js';
-import List from './list/List.js';
+import Header from './components/header/Header.js';
+import TaskList from './components/taskList/TaskList.js';
 
 function App() {
-  document.title = "To-Do"
+  document.title = "To-Do";
   return (
     <div className="App">
       <Header />
-      <List />
+      <TaskList />
     </div>
   );
 }
