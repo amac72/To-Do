@@ -10,7 +10,7 @@ function Task(props) {
 
     return (
         <div className="TaskFrame">
-            <input className="description" onChange={(event) => update(event.target.value, 'description', data)} value={data.description} />
+            <input className="description" onChange={(event) => update(event.target.value, 'description', data)} value={data.description} placeholder="Enter task here" />
             <input type="date" className="date" onChange={(event) => update(event.target.value, 'date', data)} value={data.date} />
             <button className="deleteButton" onClick={(event) => props.onClick(event.target.value)}>Delete</button>
         </div>
