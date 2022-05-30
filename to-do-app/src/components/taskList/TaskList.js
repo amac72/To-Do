@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Task from './Task';
 import data from "./test.json";
+import './TaskList.css';
 
 function TaskList() {
     const [taskList, setTaskList] = useState(data);
@@ -21,6 +22,19 @@ function TaskList() {
         }
     }
 
+    function addTask() {
+        const temp = [...taskList];
+        const nextID = temp[temp.length - 1].id + 1
+        temp.push(
+            {
+                id: nextID,
+                description: "",
+                date: "",
+            }
+        );
+        setTaskList(temp);
+    }
+
     return (
         <div>
             {taskList.map(task => {
@@ -31,6 +45,12 @@ function TaskList() {
                     </div>
                 )
             })}
+            <div className="bottom_of_page"></div>
+            <div className="footer">
+                <div className="footer_contents">
+                    <button className="add_task" onClick={addTask}>+</button>
+                </div>
+            </div>
         </div>
     );
 }
