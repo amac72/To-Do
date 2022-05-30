@@ -24,7 +24,12 @@ function TaskList() {
 
     function addTask() {
         const temp = [...taskList];
-        const nextID = temp[temp.length - 1].id + 1
+        let nextID = -1
+        if (temp.length === 0) {
+            nextID = 1
+        } else {
+            nextID = temp[temp.length - 1].id + 1
+        }
         temp.push(
             {
                 id: nextID,
