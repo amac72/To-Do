@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Task from './Task';
-import data from "./test.json";
 import './TaskList.css';
 
-function TaskList() {
+function TaskList({ data }) {
     const [taskList, setTaskList] = useState(data);
 
     function deleteTask(id) {
@@ -44,14 +43,14 @@ function TaskList() {
         <div>
             {taskList.map(task => {
                 return (
-                    <div key={task.id}>
+                    <div key={task.id} data-testid={`task-${task.id}`}>
                         <Task task={task} onClick={() => deleteTask(task.id)} />
                         <br></br>
                     </div>
                 )
             })}
             <div className="bottom_of_page"></div>
-            <div className="footer">
+            <div className="footer" data-testid="footer-1">
                 <div className="footer_contents">
                     <button className="add_task" onClick={addTask}>+</button>
                 </div>

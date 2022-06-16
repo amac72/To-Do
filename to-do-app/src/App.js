@@ -1,4 +1,5 @@
 import './App.css';
+import data from "./test.json";
 import Header from './components/header/Header.js';
 import TaskList from './components/taskList/TaskList.js';
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <TaskList />
+      <TaskList data={data} />
     </div>
   );
 }
