@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "description": "Clean apartment",
+        "date": "2022-04-27"
+    },
+    {
+        "id": 2,
+        "description": "Pay rent",
+        "date": "2022-05-01"
+    },
+    {
+        "id": 3,
+        "description": "Work on To-Do.com",
+        "date": "2022-05-05"
+    },
+    {
+        "id": 4,
+        "description": "Exercise",
+        "date": "2022-05-23"
+    },
+    {
+        "id": 5,
+        "description": "Clean apartment",
+        "date": "2022-04-27"
+    },
+    {
+        "id": 6,
+        "description": "Pay rent",
+        "date": "2022-05-01"
+    },
+    {
+        "id": 7,
+        "description": "Work on To-Do.com",
+        "date": "2022-05-05"
+    },
+    {
+        "id": 8,
+        "description": "Exercise",
+        "date": "2022-05-23"
+    }
+]

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    data-testid="task-1"
+  >
+    <div
+      className="TaskFrame"
+    >
+      <input
+        className="description"
+        onChange={[Function]}
+        placeholder="Enter task here"
+        value="Clean apartment"
+      />
+      <input
+        className="date"
+        onChange={[Function]}
+        type="date"
+        value="2022-04-27"
+      />
+      <button
+        className="deleteButton"
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </div>
+    <br />
+  </div>
+  <div
+    data-testid="task-2"
+  >
+    <div
+      className="TaskFrame"
+    >
+      <input
+        className="description"
+        onChange={[Function]}
+        placeholder="Enter task here"
+        value="Pay rent"
+      />
+      <input
+        className="date"
+        onChange={[Function]}
+        type="date"
+        value="2022-05-01"
+      />
+      <button
+        className="deleteButton"
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </div>
+    <br />
+  </div>
+  <div
+    className="bottom_of_page"
+  />
+  <div
+    className="footer"
+    data-testid="footer-1"
+  >
+    <div
+      className="footer_contents"
+    >
+      <button
+        className="add_task"
+        onClick={[Function]}
+      >
+        +
+      </button>
+    </div>
+  </div>
+</div>
+`;

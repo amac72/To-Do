@@ -1,19 +1,16 @@
 import './App.css';
+import data from "./test.json";
+import Header from './components/header/Header.js';
+import TaskList from './components/taskList/TaskList.js';
 
- import Main from './Main.js';
+function App() {
+  document.title = "To-Do";
+  return (
+    <div className="App">
+      <Header />
+      <TaskList data={data} />
+    </div>
+  );
+}
 
- function App() {
-   document.title = "To-Do"
-   return (
-     <div className="App">
-       <h1>To-Do</h1>
-       <h2>View, add, change, and delete items from your to-do list.</h2>
-       <a href="https://github.com/amac72/To-Do" target="_blank" rel="noopener noreferrer">Click Me to Visit the Repo!</a>
-       <hr></hr>
-       <br></br>
-       <Main />
-     </div>
-   );
- }
-
- export default App;
+export default App;
