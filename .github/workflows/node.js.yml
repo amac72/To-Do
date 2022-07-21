@@ -11,9 +11,11 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
-
+    defaults:
+      run:
+        working-directory: ./to-do-app
+        
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
@@ -26,7 +28,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd to-do-app
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
