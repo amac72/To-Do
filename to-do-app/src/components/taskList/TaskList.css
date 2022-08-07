@@ -1,4 +1,4 @@
-.footer {
+.bottom_of_page {
     height: 150px;
     width: 100%;
     background-image: none;
@@ -8,27 +8,27 @@
     position: fixed;
     bottom: 0pt;
     left: 0pt;
+    pointer-events: none;
 }
 
-.footer_contents {
-    height: 150px;
-    width: 100%;
-    margin: auto;
-    background-color: white;
-    border-top: 0.5px solid black;
-    display: flex;
-}
-
-.bottom_of_page {
-    height: 150px;
-}
-
-.add_task {
-    width: 500px;
+.bottom_of_page button {
+    width: 100px;
     height: 100px;
     margin: auto;
     border: solid 1px gray;
-    border-radius: 20px;
+    border-radius: 200px;
     box-shadow: 0 0 5px grey;
     font-size: 50px;
+    pointer-events: all;
+}
+
+#reorder_tasks {
+    margin-left: 100px;
+    margin-right: 120vmin;
+    font-size: 20px;
+}
+
+#add_task {
+    margin-right: 100px;
+    padding-bottom: 10px;
 }
