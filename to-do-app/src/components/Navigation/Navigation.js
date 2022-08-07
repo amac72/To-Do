@@ -18,7 +18,7 @@ export default function Navigation() {
                         <Nav.Link href="/To-Do/completed">Completed</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
-                        <Button variant="secondary" id="button" onClick={handleShow}>?</Button>
+                        <Button variant="secondary" className="gray-button" onClick={handleShow}>?</Button>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
@@ -29,7 +29,7 @@ export default function Navigation() {
                 <Modal.Body>Add, change, organize, and complete tasks on your to-do list.</Modal.Body>
                 <Modal.Body>Please Note: This site is for demonstration purposes only. Data will not persist.</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" className="gray-button" onClick={handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>

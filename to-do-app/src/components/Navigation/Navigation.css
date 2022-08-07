@@ -1,6 +1,14 @@
-#button {
+.gray-button {
     font-weight: bold;
     background-color: gray;
-    border-color: gray;
     color: white;
+    border: none;
+}
+
+.gray-button:hover {
+    background-color: #6b6a6a;
+}
+
+.gray-button:focus {
+    background-color: #6b6a6a;
 }
