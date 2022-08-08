@@ -16,7 +16,6 @@ function TaskList({ data, status }) {
             }
         })
         setTaskList(temp)
-        console.log(temp)
     }
 
     function deleteTask(id) {
@@ -42,7 +41,15 @@ function TaskList({ data, status }) {
     function reorderTasks() {
         const temp = [...taskList]
         temp.sort((a, b) => {
-            return new Date(a.date).getTime() - new Date(b.date).getTime()
+            const dateA = new Date(a.date).getTime() || 0
+            const dateB = new Date(b.date).getTime() || 0
+            if (dateA === 0) {
+                return 1
+            } else if (dateB === 0) {
+                return -1
+            } else {
+                return dateA - dateB
+            }
         })
         setTaskList(temp);
     }
