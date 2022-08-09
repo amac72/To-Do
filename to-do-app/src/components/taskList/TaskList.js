@@ -16,7 +16,6 @@ function TaskList({ data, status }) {
             }
         })
         setTaskList(temp)
-        console.log(temp)
     }
 
     function deleteTask(id) {
