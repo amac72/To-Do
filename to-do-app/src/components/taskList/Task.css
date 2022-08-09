@@ -19,11 +19,43 @@
     border-radius: 20px;
 }
 
+.completeButton {
+    grid-area: check;
+    text-align: center;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: none;
+    box-shadow: none;
+}
+
+.completeButton:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: none;
+}
+
+.completeButton:focus {
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: none;
+}
+
+.completeButton:active {
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: none !important;
+}
+
 .TaskFrame {
     display: grid;
     grid-template-areas:
-        'task task task task task delete'
-        'date date date date date delete';
+        'check task task task task task delete'
+        'check date date date date date delete';
     gap: 10px;
     padding: 7px;
     width: 75vmin;
