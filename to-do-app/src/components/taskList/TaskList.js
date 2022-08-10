@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Task from './Task';
 import Footer from './Footer';
 
-
-function TaskList({ data, status }) {
-    const [taskList, setTaskList] = useState(data);
+function TaskList(props) {
+    const { taskList, setTaskList } = props
     const [nextId, setNextId] = useState(taskList[taskList.length - 1].id + 1)
+
+    function getStatus(location) {
+        const pathname = location.pathname;
+        let status = ""
+        if (pathname === "/To-Do/completed") {
+            status = true
+        } else {
+            status = false
+        }
+        return status
+    }
+
+    const status = getStatus(useLocation())
 
     function updateTask(value, fieldName, id) {
         const temp = [...taskList].map(task => {
@@ -64,7 +77,7 @@ function TaskList({ data, status }) {
                     </div>
                 )
             })}
-            <Footer reorderTasks={() => reorderTasks()} addTask={() => addTask()} />
+            <Footer reorderTasks={() => reorderTasks()} addTask={() => addTask()} status={status} />
         </div>
     );
 }

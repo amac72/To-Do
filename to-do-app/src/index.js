@@ -1,5 +1,5 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './App.css';
@@ -11,12 +11,13 @@ import TaskList from "./components/TaskList/TaskList";
 
 export default function App() {
   document.title = "To-Do";
+  const [taskList, setTaskList] = useState(data);
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/To-Do" element={<Navigation />}>
-          <Route index element={<TaskList data={data} status={false} />} />
-          <Route path="/To-Do/completed" element={<TaskList data={data} status={true} />} />
+          <Route exact path="/To-Do" element={<TaskList taskList={taskList} setTaskList={setTaskList} />} />
+          <Route exact path="/To-Do/completed" element={<TaskList taskList={taskList} setTaskList={setTaskList} />} />
         </Route>
       </Routes>
     </BrowserRouter>
