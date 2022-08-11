@@ -13,10 +13,16 @@ You can find the project Github Page [here](https://austinmclain.github.io/To-Do
 
 ## How to Run Locally
 Using your terminal, clone this repo:
-> git clone https://github.com/amac72/To-Do.git
+> git clone https://github.com/austinmclain/To-Do.git
 
 Next, use the Node package manager to install the necessary dependencies within the current project directory:
+> cd To-Do
+
+> cd to-do-app
+
 > npm install
 
 Finally, run the application:
 > npm start
+
+Please Note: This will run the demo code found in the "main" branch, which doesn't include .NET and MySQL.
