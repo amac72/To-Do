@@ -9,7 +9,7 @@ To-Do is a full-stack web application that uses React, .NET, and MySQL. Add, cha
 <img width="800" alt="todo2" src="https://user-images.githubusercontent.com/93621884/184024812-9833b05c-1724-44e5-8a7c-c8ead23c29aa.png">
 </p>
 
-<img align="left" width="400" alt="todo3" src="https://user-images.githubusercontent.com/93621884/184026090-c9636226-1c57-45df-8711-916dc38a8c2f.png">
+<img align="left" width="500" alt="todo3" src="https://user-images.githubusercontent.com/93621884/184026090-c9636226-1c57-45df-8711-916dc38a8c2f.png">
 
 ## Motivation
 As a frequent user of the Microsoft To Do task management app, I set out to create a similiar application that maintains my favorite features and removes the features I find to be unnecessary, all while adding some personal touch.
