@@ -2,41 +2,25 @@
     {
         "id": 1,
         "description": "Clean apartment",
-        "date": "2022-04-27"
+        "date": "2022-06-10",
+        "completed": false
     },
     {
         "id": 2,
-        "description": "Pay rent",
-        "date": "2022-05-01"
+        "description": "Work on To-Do.com",
+        "date": "2022-12-02",
+        "completed": false
     },
     {
         "id": 3,
-        "description": "Work on To-Do.com",
-        "date": "2022-05-05"
+        "description": "Finish assignment",
+        "date": "2022-05-15",
+        "completed": true
     },
     {
         "id": 4,
-        "description": "Exercise",
-        "date": "2022-05-23"
-    },
-    {
-        "id": 5,
-        "description": "Clean apartment",
-        "date": "2022-04-27"
-    },
-    {
-        "id": 6,
-        "description": "Pay rent",
-        "date": "2022-05-01"
-    },
-    {
-        "id": 7,
-        "description": "Work on To-Do.com",
-        "date": "2022-05-05"
-    },
-    {
-        "id": 8,
-        "description": "Exercise",
-        "date": "2022-05-23"
+        "description": "Shop for groceries",
+        "date": "2022-04-27",
+        "completed": false
     }
 ]

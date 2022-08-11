@@ -12,11 +12,13 @@ test('should render example task list', () => {
         {
             id: 1,
             description: "Clean apartment",
-            date: "2022-04-27"
+            date: "2022-04-27",
+            completed: "no"
         }, {
             id: 2,
             description: "Pay rent",
-            date: "2022-05-01"
+            date: "2022-05-01",
+            completed: "no"
         }
     ];
     render(<TaskList data={taskList} />)
@@ -38,11 +40,13 @@ test('matches snapshot', () => {
         {
             id: 1,
             description: "Clean apartment",
-            date: "2022-04-27"
+            date: "2022-04-27",
+            completed: "no"
         }, {
             id: 2,
             description: "Pay rent",
-            date: "2022-05-01"
+            date: "2022-05-01",
+            completed: "no"
         }
     ];
     const tree = renderer.create(<TaskList data={taskList} />).toJSON();
