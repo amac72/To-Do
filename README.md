@@ -1,5 +1,5 @@
 # To-Do
-To-Do is a full-stack web application that uses React, .NET, and MySQL. Add, change, organize, and complete tasks on your to-do list. This project was inspired by the Microsoft To Do task management app.
+To-Do is a full-stack web application that uses React, C#, and MySQL. Add, change, organize, and complete tasks on your to-do list. This project was inspired by the Microsoft To Do task management app.
 
 <p align="center">
 <img width="840" alt="todo-images" src="https://user-images.githubusercontent.com/93621884/184045711-65a17943-7a0d-4fa9-b0db-ee76397f2a39.png">
@@ -25,4 +25,4 @@ Next, use the Node package manager to install the necessary dependencies within 
 Finally, run the application:
 > npm start
 
-Please Note: This will run the demo code found in the "main" branch, which doesn't include .NET and MySQL.
+Please Note: This will run the demo code found in the "main" branch, which doesn't include C# and MySQL.
