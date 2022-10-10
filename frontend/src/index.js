@@ -1,27 +1,43 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './App.css';
-import data from "./test.json";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation"
 import TaskList from "./components/TaskList/TaskList";
+import axios from 'axios';
 // import reportWebVitals from './reportWebVitals';
 
 export default function App() {
-  document.title = "To-Do";
-  const [taskList, setTaskList] = useState(data);
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/To-Do" element={<Navigation />}>
-          <Route exact path="/To-Do" element={<TaskList taskList={taskList} setTaskList={setTaskList} />} />
-          <Route exact path="/To-Do/completed" element={<TaskList taskList={taskList} setTaskList={setTaskList} />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    document.title = "To-Do";
+    const [taskList, setTaskList] = useState("");
+    const url = "https://localhost:7022/api/";
+
+    useEffect(() => {
+        getTaskItems();
+    }, []);
+
+    const getTaskItems = () => {
+        console.log("HI")
+        axios.get(`${url}taskitems`)
+            .then((response) => {
+                const data = response.data;
+                setTaskList(data);
+            })
+            .catch(error => console.error(`Error: ${error}`));
+    }
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/To-Do" element={<Navigation />}>
+                    <Route exact path="/To-Do" element={taskList && <TaskList taskList={taskList} setTaskList={setTaskList} />} />
+                    <Route exact path="/To-Do/completed" element={taskList && <TaskList taskList={taskList} setTaskList={setTaskList} />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

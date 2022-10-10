@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = "server=localhost;user=root;password=;database=todo";
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
@@ -14,6 +16,14 @@ builder.Services.AddDbContext<TaskContext>(opt =>
 //{
 //    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
 //});
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000");
+        });
+});
 
 var app = builder.Build();
 
@@ -26,6 +36,8 @@ if (builder.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

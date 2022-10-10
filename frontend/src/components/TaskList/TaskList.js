@@ -4,7 +4,7 @@ import Task from './Task';
 import Footer from './Footer';
 
 function TaskList(props) {
-    const { taskList, setTaskList } = props
+    const { taskList, setTaskList } = props;
     const [nextId, setNextId] = useState(taskList[taskList.length - 1].id + 1)
 
     function getStatus(location) {
