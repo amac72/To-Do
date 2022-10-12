@@ -1,5 +1,5 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './App.css';
@@ -13,30 +13,30 @@ export default function App() {
     document.title = "To-Do";
     const [taskList, setTaskList] = useState("");
     const url = "https://localhost:7022/api/";
+    let status = useRef(false);
 
     useEffect(() => {
+        const getTaskItems = () => {
+            axios.get(`${url}taskitems`)
+                .then((response) => {
+                    const data = response.data;
+                    setTaskList(data);
+                    status.current = true;
+                })
+                .catch(error => console.error(`Error: ${error}`));
+        }
         getTaskItems();
     }, []);
-
-    const getTaskItems = () => {
-        console.log("HI")
-        axios.get(`${url}taskitems`)
-            .then((response) => {
-                const data = response.data;
-                setTaskList(data);
-            })
-            .catch(error => console.error(`Error: ${error}`));
-    }
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/To-Do" element={<Navigation />}>
+                <Route path="/To-Do" element={<Navigation status={status.current} />}>
                     <Route exact path="/To-Do" element={taskList && <TaskList taskList={taskList} setTaskList={setTaskList} />} />
                     <Route exact path="/To-Do/completed" element={taskList && <TaskList taskList={taskList} setTaskList={setTaskList} />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </BrowserRouter >
     );
 }
 

@@ -3,7 +3,9 @@ import { Navbar, Container, Nav, Button, Modal } from 'react-bootstrap';
 import { Outlet, Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Navigation() {
+export default function Navigation(props) {
+    const { status } = props;
+    const statusString = status ? "Up" : "Down";
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -27,7 +29,7 @@ export default function Navigation() {
                     <Modal.Title>About This Site</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Add, change, organize, and complete tasks on your to-do list.</Modal.Body>
-                <Modal.Body>Please Note: This site is for demonstration purposes only. Data will not persist.</Modal.Body>
+                <Modal.Body>Server Status: {statusString}</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" className="gray-button" onClick={handleClose}>
                         Close
