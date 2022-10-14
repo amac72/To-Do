@@ -31,9 +31,9 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/To-Do" element={<Navigation status={status.current} />}>
-                    <Route exact path="/To-Do" element={taskList && <TaskList taskList={taskList} setTaskList={setTaskList} />} />
-                    <Route exact path="/To-Do/completed" element={taskList && <TaskList taskList={taskList} setTaskList={setTaskList} />} />
+                <Route path="/To-Do" element={<Navigation status={status.current} url={url} />}>
+                    <Route exact path="/To-Do" element={(taskList && <TaskList taskList={taskList} setTaskList={setTaskList} url={url} />) || <p>Loading...</p>} />
+                    <Route exact path="/To-Do/completed" element={(taskList && <TaskList taskList={taskList} setTaskList={setTaskList} url={url} />) || <p>Loading...</p>} />
                 </Route>
             </Routes>
         </BrowserRouter >
