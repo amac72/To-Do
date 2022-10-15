@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Task from './Task';
 import Footer from './Footer';
+import axios from 'axios';
 
 function TaskList(props) {
-    const { taskList, setTaskList } = props;
+    const { taskList, setTaskList, url } = props;
     const [nextId, setNextId] = useState(taskList[taskList.length - 1].id + 1)
 
     function getStatus(location) {
@@ -38,6 +39,17 @@ function TaskList(props) {
     }
 
     function addTask() {
+        axios.post(`${url}taskitems`, {
+            id: nextId,
+            description: null,
+            date: null,
+            completed: false
+        })
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch(error => console.error(`Error: ${error}`));
+
         const temp = [...taskList];
         temp.push(
             {
