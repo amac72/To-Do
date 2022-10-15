@@ -24,6 +24,16 @@ function TaskList(props) {
     function updateTask(value, fieldName, id) {
         const temp = [...taskList].map(task => {
             if (task.id === id) {
+                axios.put(`${url}taskitems/${id}`, {
+                    id: task.id,
+                    description: fieldName === "description" ? value : task.description,
+                    date: fieldName === "date" ? value : task.date,
+                    completed: fieldName === "completed" ? value : task.completed,
+                })
+                    .then((response) => {
+                        console.log(response.data);
+                    })
+                    .catch(error => console.error(`Error: ${error}`));
                 return { ...task, [fieldName]: value }
             } else {
                 return { ...task }
@@ -60,7 +70,7 @@ function TaskList(props) {
             {
                 id: nextId,
                 description: "",
-                date: "",
+                date: null,
                 completed: false
             }
         );

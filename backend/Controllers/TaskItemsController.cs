@@ -57,7 +57,24 @@ namespace backend.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(taskItemDTO).State = EntityState.Modified;
+            // _context.Entry(taskItemDTO).State = EntityState.Modified;
+
+            var taskItem = await _context.TaskItems.FindAsync(id);
+            if (taskItem == null)
+            {
+                return NotFound();
+            }
+
+            taskItem.id = taskItemDTO.id;
+
+            if (taskItemDTO.description == null)
+            {
+                taskItem.description = "";
+            }
+            else { taskItem.description = taskItemDTO.description; }
+
+            taskItem.date = taskItemDTO.date;
+            taskItem.completed = taskItemDTO.completed;
 
             try
             {
