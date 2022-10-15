@@ -34,6 +34,11 @@ function TaskList(props) {
 
     function deleteTask(id) {
         if (window.confirm("Are you sure you want to delete this task?")) {
+            axios.delete(`${url}taskitems/${id}`)
+                .then((response) => {
+                    console.log(response.data);
+                })
+                .catch(error => console.error(`Error: ${error}`));
             setTaskList(taskList.filter(item => item.id !== id));
         }
     }
